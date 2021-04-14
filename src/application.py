@@ -29,7 +29,7 @@ def main():
         for component in item.get("components"):
             # TODO: Use blacklist in here
             if not any(x in component.get("key") for x in ["sample-app", "sample-app-2"]):
-                api_url = "{url}/api/measures/component?componentKey={key}&metricKeys=ncloc"\
+                api_url = "{url}/api/measures/component?component={key}&metricKeys=ncloc"\
                     .format(url=sonarqube_url, key=component.get("key"))
                 api_response = requests.post(api_url, auth=basic_auth_credentials).json()
                 lines_of_code += int(api_response.get("component").get("measures")[0].get("value"))
