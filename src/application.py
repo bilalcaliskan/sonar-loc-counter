@@ -9,7 +9,7 @@ def main():
     basic_auth_credentials = (str(os.environ["SONAR_USER"]), str(os.environ["SONAR_PASS"]))
     sonarqube_url = str(os.environ["SONAR_URL"])
     # TODO: Use blacklist while counting lines
-    blacklist = str(os.environ["BLACKLIST"])
+    # blacklist = str(os.environ["BLACKLIST"])
 
     api_url = "{url}/api/components/search?qualifiers=TRK".format(url=sonarqube_url)
     api_response = requests.get(api_url, auth=basic_auth_credentials).json()
