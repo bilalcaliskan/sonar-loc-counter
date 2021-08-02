@@ -13,9 +13,9 @@ $ python3 src/application.py
 ```
 
 ### Configuration
-sonar-loc-counter can be customized with several environment variables. Here are several environment variables which you can define before running the script:
+Configuration parameters are taken at the runtime as inputs:
 ```
-SONAR_USER    An authorized sonarqube user which has read access
-SONAR_PASS    An authorized sonarqube password which has read access
-SONAR_URL     Target sonarqube instance. (ex: https://sonarqube.example.com)
+sonar_user    An authorized sonarqube user which has read access
+sonar_pass    An authorized sonarqube password which has read access
+sonar_url     Target sonarqube instance. (ex: https://sonarqube.example.com)
 ```
