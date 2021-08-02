@@ -2,12 +2,14 @@
 
 import math
 import requests
-import os
 
 
 def main():
-    basic_auth_credentials = (str(os.environ["SONAR_USER"]), str(os.environ["SONAR_PASS"]))
-    sonarqube_url = str(os.environ["SONAR_URL"])
+    basic_auth_user = str(input("Basic auth user for Sonarqube: ") or "admin")
+    basic_auth_pass = str(input("Basic auth pass/token for Sonarqube: ") or "admin")
+    sonarqube_url = str(input("Sonarqube URL(ex: https://sonarqube.example.com): ") or "https://sonarqube.example.com")
+    basic_auth_credentials = (basic_auth_user, basic_auth_pass)
+
     # TODO: Use blacklist while counting lines
     # blacklist = str(os.environ["BLACKLIST"])
 
